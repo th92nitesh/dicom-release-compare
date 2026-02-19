@@ -2,6 +2,31 @@
 
 This repository defines an implementable, enterprise-grade architecture for comparing full DICOM standard releases (e.g., `2024e` → `2026a`) and generating machine-readable + audit-ready impact outputs for downstream validator updates.
 
+
+## Quickstart (Implementation Kickoff)
+
+This repository now includes a bootstrap implementation skeleton:
+- Python package scaffold (`src/dicom_release_compare`)
+- CLI (`drc`) for environment checks and run initialization
+- Config templates in `configs/` for pipeline, LLM, embeddings, and scoring
+- Local infra bootstrap via `docker-compose.yml` (Postgres+pgvector and MinIO)
+- Task backlog and environment setup details in `docs/IMPLEMENTATION_TASKS.md`
+
+### Local setup
+```bash
+cp .env.example .env
+make install
+make dev-up
+make doctor
+make pipeline
+make init-run
+```
+
+For the complete implementation task list and tool-by-tool setup/configuration checklist, see:
+- `docs/IMPLEMENTATION_TASKS.md`
+
+---
+
 ---
 
 ## 1) High-Level Architecture

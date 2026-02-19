@@ -1,0 +1,15 @@
+pipeline:
+  version: 0.1.0
+  stages:
+    - fetch
+    - parse
+    - normalize
+    - align
+    - diff
+    - semantic
+    - score
+    - report
+    - publish
+  ci:
+    schedule: "0 3 * * 1"
+    compare_strategy: "last_validated_to_latest"

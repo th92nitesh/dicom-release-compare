@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dicom-release-compare"
+version = "0.1.0"
+description = "Enterprise pipeline bootstrap for DICOM release comparison"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "DICOM Platform Team" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+drc = "dicom_release_compare.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
