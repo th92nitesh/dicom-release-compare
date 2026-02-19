@@ -1,0 +1,15 @@
+scoring:
+  thresholds:
+    minor_max: 19
+    clarification_max: 39
+    technical_max: 69
+    breaking_max: 100
+  weights:
+    type_strengthened: 35
+    vm_tightened: 30
+    vr_changed: 25
+    sop_retired: 25
+    module_mandatory: 20
+    normative_statement_changed: 15
+    clause_moved: 10
+    editorial_only: -20

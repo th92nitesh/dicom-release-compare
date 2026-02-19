@@ -1,0 +1,7 @@
+llm:
+  provider: openai
+  model: gpt-5
+  temperature_semantic_diff: 0.1
+  temperature_report_generation: 0.3
+  max_tokens_semantic_diff: 1200
+  json_schema_enforced: true

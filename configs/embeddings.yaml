@@ -1,0 +1,15 @@
+embeddings:
+  provider: local
+  model: bge-m3
+  chunking:
+    strategy: semantic_clause_table
+    token_min: 400
+    token_max: 900
+    overlap_pct: 0.15
+  metadata:
+    - release
+    - part
+    - clause_id
+    - heading_path
+    - table_id
+    - page_range
